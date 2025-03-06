@@ -16,11 +16,10 @@ header {
   color: #fff;
   padding: 20px;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: bold;
 }
 
-/* Estilo del menú de navegación */
 nav ul.menu {
   list-style-type: none;
   display: flex;
@@ -58,12 +57,10 @@ nav ul.menu a:hover {
   transform: scale(1.05);
 }
 
-/* Sombra del menú */
 nav ul.menu li:hover {
   transform: scale(1.1);
 }
 
-/* Efecto de animación en los enlaces del menú */
 nav ul.menu li::after {
   content: "";
   position: absolute;
@@ -79,127 +76,75 @@ nav ul.menu li:hover::after {
   width: 100%;
 }
 
-.contenedor {
-  max-width: 900px;
-  margin: 30px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-h2,
-h3 {
-  color: #0033ff;
-}
-
-.option a {
-  display: inline-block;
-  margin: 15px;
-  padding: 12px 25px;
-  background: #0033ff;
-  color: white;
-  text-decoration: none;
-  border-radius: 25px;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-.option a:hover {
-  background: #001a99;
-}
-
 main {
   display: flex;
-  flex-wrap: wrap;
-  max-width: 1000px;
+  flex-direction: column;
+  align-items: center;
   margin: 30px auto;
-}
-
-.posts {
-  flex: 2;
-  margin-right: 20px;
-}
-
-.posts article {
-  background: white;
+  max-width: 1000px;
   padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
 }
 
-.posts article:hover {
-  transform: scale(1.02);
+section {
+  margin-bottom: 30px;
 }
 
-.posts article p span.color {
-  font-weight: bold;
-  padding: 5px 10px;
-  border-radius: 5px;
-  color: white;
-}
-
-.posts article p span.color-azul {
-  background: #007bff;
-}
-
-.posts article p span.color-morado {
-  background: #800080;
-}
-
-.posts article p span.animal {
-  font-weight: bold;
-  color: #ff5733;
-  font-style: italic;
-}
-
-aside {
-  flex: 1;
-}
-
-.identificacion {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+section h2 {
   text-align: center;
+  font-size: 2em;
+  color: #0033ff;
+  margin-bottom: 20px;
 }
-
-.identificacion img {
-  width: 150px;
-  height: auto;
-  border-radius: 50%;
-  margin-top: 10px;
-}
-
-.identificacion .boton-salir {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #ff4d4d;
-  color: white;
-  text-decoration: none;
-  border-radius: 25px;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-.identificacion ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.identificacion .boton-salir:hover {
-  background: #cc0000;
-}
-
-/* Botón de regresar al inicio */
-.boton-regresar {
-  display: inline-block;
+.galeria-musica,
+.galeria-pasatiempos,
+.galeria-libros,
+.galeria-animales {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 30px;
   margin-top: 30px;
+  margin-left: -600px;
+}
+
+.mosaico {
+  width: 280px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mosaico:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.mosaico img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.mosaico h3 {
+  color: #0033ff;
+  margin-bottom: 10px;
+}
+
+.mosaico p {
+  color: #333;
+}
+
+.boton-regresar {
+  margin-top: 350px;
+  margin-left: 300px;
+  display: inline-block;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 12px 30px;
   background: linear-gradient(135deg, #0033ff, #28a745);
   color: white;
@@ -208,13 +153,17 @@ aside {
   font-weight: bold;
   text-align: center;
   transition: background 0.4s ease;
+  z-index: 10;
 }
 
 .boton-regresar:hover {
   background: linear-gradient(135deg, #ff5733, #28a745);
 }
 
-/* Footer */
+.boton-regresar:hover {
+  background: linear-gradient(135deg, #ff5733, #28a745);
+}
+
 footer {
   background-color: #0033ff;
   color: white;
